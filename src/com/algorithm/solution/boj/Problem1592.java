@@ -3,12 +3,11 @@ package com.algorithm.solution.boj;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-/* BOJ 1592 : 영식이와 친구들 */
+/* BOJ 1592. 영식이와 친구들 */
 public class Problem1592 {
     static int N, M, L;
 
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("input/boj/Input1592.txt"));
         Scanner sc = new Scanner(System.in);
 

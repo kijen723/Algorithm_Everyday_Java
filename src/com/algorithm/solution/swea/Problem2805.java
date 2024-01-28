@@ -3,7 +3,7 @@ package com.algorithm.solution.swea;
 import java.io.FileInputStream;
 import java.util.Scanner;
 
-/* SWEA 2805 : 농작물 수확하기 */
+/* SWEA 2805. 농작물 수확하기 */
 public class Problem2805 {
     public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("input/swea/Input2805.txt"));
@@ -11,8 +11,7 @@ public class Problem2805 {
 
         int T = sc.nextInt();
 
-        for(int test_case = 1; test_case <= T; test_case++)
-        {
+        for(int test_case = 1; test_case <= T; test_case++) {
             int N = sc.nextInt();
             int[][] farm = new int[N][N];
             int answer = 0;
