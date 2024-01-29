@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
+/* SWEA 1860. 진기의 최고급 붕어빵 */
 public class Problem1860 {
     public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("input/swea/Input1860.txt"));
