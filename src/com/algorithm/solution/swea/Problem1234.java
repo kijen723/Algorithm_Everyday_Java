@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 /* SWEA 1234. [S/W 문제해결 기본] 10일차 - 비밀번호 */
 public class Problem1234 {
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("input/swea/Input1234.txt"));
         Scanner sc = new Scanner(System.in);
 

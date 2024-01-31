@@ -5,8 +5,7 @@ import java.util.Scanner;
 
 /* SWEA 4615. 재미있는 오셀로 게임 */
 public class Problem4615 {
-    public static void main(String[] args) throws Exception
-    {
+    public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("input/swea/Input4615.txt"));
         Scanner sc = new Scanner(System.in);
 
