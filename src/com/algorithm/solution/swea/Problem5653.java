@@ -71,11 +71,9 @@ public class Problem5653 {
                                     nx = i + dir[k][0];
                                     ny = j + dir[k][1];
 
-                                    if (nx < 0 && nx >= grid.length && ny < 0 && ny >= grid[i].length) {
-                                        continue;
-                                    }
-
-                                    if (grid[nx][ny][4] == 0 || (grid[nx][ny][2] == time && grid[i][j][5] > grid[nx][ny][5])) {
+                                    if ((nx >= 0 && nx < grid.length && ny >= 0 && ny < grid[i].length)
+                                            && (grid[nx][ny][4] == 0
+                                                || (grid[nx][ny][2] == time && grid[i][j][5] > grid[nx][ny][5]))) {
                                         grid[nx][ny][0] = 1;
                                         grid[nx][ny][1] = 0;
                                         grid[nx][ny][2] = time;
