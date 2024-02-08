@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Queue;
 
-/* BOJ 2023. 신기한 소수 */
+/* BOJ 2164. 카드2 */
 public class Problem2164 {
     public static void main(String[] args) throws Exception {
         System.setIn(new FileInputStream("input/boj/Input2164.txt"));

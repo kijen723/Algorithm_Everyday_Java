@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* SWEA 17136. 색종이 붙이기 */
+/* BOJ 17136. 색종이 붙이기 */
 public class Problem17136 {
     static int answer = Integer.MAX_VALUE;
     static int[][] paper = new int[10][10];
@@ -36,9 +36,9 @@ public class Problem17136 {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (start) {
+                    start = false;
                     i = x;
                     j = y;
-                    start = false;
                 }
 
                 if (cCnt >= answer) {
