@@ -32,12 +32,11 @@ public class Problem1767 {
 
                 for (int c = 0; c < processer[r].length; c++) {
                     processer[r][c] = Integer.parseInt(st.nextToken());
-                    core.add(new int[] {r, c});
+                    if (processer[r][c] == 1) core.add(new int[] {r, c});
                 }
             }
 
             answer = new int[2];
-            answer[1] = Integer.MAX_VALUE;
             visited = new boolean[core.size()];
 
             connect(0, 0);
@@ -51,11 +50,14 @@ public class Problem1767 {
     private static void connect(int lineCnt, int coreCnt) {
         if (answer[1] < coreCnt) {
             answer[0] = lineCnt;
+            answer[1] = coreCnt;
         } else if (answer[1] == coreCnt) {
             answer[0] = Math.min(answer[0], lineCnt);
         }
 
         for (int i = 0; i < core.size(); i++) {
+            if (answer[1] > coreCnt + (core.size() - i)) return;
+
             if (!visited[i]) {
                 visited[i] = true;
 
