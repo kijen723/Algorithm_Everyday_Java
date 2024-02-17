@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
@@ -63,12 +64,17 @@ public class Problem16236 {
         int[] cur;
         boolean[][] visited = new boolean[N][N];
         Queue<int[]> queue = new ArrayDeque<>();
+        PriorityQueue<int[]> pq = new PriorityQueue<>((o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]);
+        boolean stop = false;
+        int stopTime = 0;
 
         queue.offer(new int[] {r, c, time});
         visited[r][c] = true;
 
         while (!queue.isEmpty()) {
             cur = queue.poll();
+
+            if (stop && cur[2] == stopTime) break;
 
             for (int d = 0; d < dir.length; d++) {
                 nr = cur[0] + dir[d][0];
@@ -79,14 +85,14 @@ public class Problem16236 {
                         visited[nr][nc] = true;
                         queue.offer(new int[] {nr, nc, cur[2] + 1});
                     } else if (map[nr][nc] < size) {
-                        int[] result = {nr, nc, cur[2] + 1};
-
-                        return result;
+                        pq.offer(new int[] {nr, nc, cur[2] + 1});
+                        stop = true;
+                        stopTime = cur[2] + 1;
                     }
                 }
             }
         }
 
-        return null;
+        return pq.poll();
     }
 }
