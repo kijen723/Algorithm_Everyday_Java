@@ -46,7 +46,7 @@ public class Problem14503 {
                     nr = R + dir[dic][0];
                     nc = C + dir[dic][1];
 
-                    if (nr >= 0 && nr < N && nc >= 0 && nc < N && map[nr][nc] == 0) {
+                    if (map[nr][nc] == 0) {
                         R = nr;
                         C = nc;
 
@@ -57,13 +57,11 @@ public class Problem14503 {
                 nr = R - dir[dic][0];
                 nc = C - dir[dic][1];
 
-                if (nr >= 0 && nr < N && nc >= 0 && nc < N) {
-                    if (map[nr][nc] < 1) {
-                        R = nr;
-                        C = nc;
-                    } else {
-                        break;
-                    }
+                if (map[nr][nc] < 1) {
+                    R = nr;
+                    C = nc;
+                } else {
+                    break;
                 }
             }
         }
@@ -80,7 +78,7 @@ public class Problem14503 {
             nr = R + dir[d][0];
             nc = C + dir[d][1];
 
-            if (nr >= 0 && nr < N && nc >= 0 && nc < N && map[nr][nc] == 0) return true;
+            if (map[nr][nc] == 0) return true;
         }
 
         return false;
