@@ -32,7 +32,7 @@ public class Problem17471 {
         for (int i = 1; i < N + 1; i++) {
             String[] input = br.readLine().split(" ");
 
-            for (int j = 0; j < input.length; j++) {
+            for (int j = 1; j < input.length; j++) {
                 abjList[i].add(Integer.parseInt(input[j]));
             }
         }
