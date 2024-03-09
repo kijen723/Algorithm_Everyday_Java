@@ -1,7 +1,7 @@
 #  Practice Algorithm everyday with Java
 
 ## TODO
-BOJ - 1493. 박스 채우기 (create) <br>
+BOJ - 1493. 박스 채우기 (진행중) <br>
 BOJ - 14865. 곡선 자르기 <br>
 BOJ - 3197. 백조의 호수 <br>
 BOJ - 2457. 공주님의 정원 <br>
