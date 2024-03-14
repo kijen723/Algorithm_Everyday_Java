@@ -3,15 +3,23 @@ package com.kijen.algorithm.boj;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayDeque;
 import java.util.StringTokenizer;
 
 /* BOJ 3197. 백조의 호수 */
 public class Problem3197 {
     static int R, C;
     static int[][] map, dic = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    ArrayDeque<int[]> water;
 
     static void move() {
+        ArrayDeque<int[]> queue = new ArrayDeque<>();
 
+        while (true) {
+            int[] cur = ;
+
+            if (cur[])
+        }
     }
 
     static void meet() {
