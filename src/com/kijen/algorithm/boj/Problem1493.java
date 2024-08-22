@@ -19,7 +19,7 @@ public class Problem1493 {
         int h = Integer.parseInt(st.nextToken());
         int N = Integer.parseInt(br.readLine());
 
-        int[] cubes = new int[20];
+        int[] cubes = new int[N];
 
         for (int r = 0; r < N; r++) {
             st = new StringTokenizer(br.readLine());
@@ -28,22 +28,26 @@ public class Problem1493 {
             cubes[size] = Integer.parseInt(st.nextToken());
         }
 
+        long cumCnt = 0;
+        long cubeCnt = 0;
 
+        for (int i = N - 1; i >= 0; i--) {
+            cumCnt <<= 3;
+
+            long divideCnt = (long) (l >> i) * (w >> i) * (h >> i) - cumCnt;
+            long minCnt = Math.min((long) cubes[i], divideCnt);
+
+            cumCnt += minCnt;
+            cubeCnt += minCnt;
+        }
+
+        if (cumCnt == (long) l * w * h) {
+            System.out.println(cubeCnt);
+        } else {
+            System.out.println(-1);
+        }
 
         br.close();
     }
 
-    private static void getCubes(int l, int w, int h, int cnt, int[] cubes) {
-        for (int i = cubes.length - 1; i >= 0; i++) {
-            if (cubes[i] == 0) {
-                continue;
-            }
-
-            int cubeLen = (int) Math.pow(2, i);
-
-            if (cubeLen <= l && cubeLen <= w && cubeLen <= h) {
-
-            }
-        }
-    }
 }
